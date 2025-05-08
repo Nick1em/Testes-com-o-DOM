@@ -29,7 +29,7 @@ botao.addEventListener('click',() => {  //Adicionando evento click ao botão
 
     textoSpan.addEventListener('click', () => { //Criando evento de click para <span> criada na <li>
         textoSpan.classList.toggle('completo'); //O evento é um risco no item que foi adicionado anteriormente
-    });
+    });                                         // e foi riscado para indicar que foi finalizado
     
     botaoRemover.addEventListener('click', () => { //Criando um evento ao botão remover
         novaTarefa.remove(); //O evento é remover o item da lista
@@ -50,5 +50,10 @@ botao.addEventListener('click',() => {  //Adicionando evento click ao botão
 });
 
  //CONSIDERAÇÕES//
+ //classList= obejeto do DOMTOLKEN que permite manipular classes ->.toggle<- de um elemento dinâmicamente!
+    //EX: vários elementos <h1> tem className="titulo", mas quero altear um desses <h1>. Então, usando
+    // elemento.classList.toggle('completo'), atribuimoos uma nova classe a um determinado <h1>! assim podemos 
+    // altera-lo sem afetar os <h1> restantes.(outras atruições do classList: add(),remove(),replace(oldTolken,
+    //newTolken), length(), contains() e intem())
  //PODEMOS DECLARAR NOVOS ELEMENTOS DENTRO DAS FUNÇÕES
  //ANTERIORMENTE AO INVEZ DE <SPAN> USEI TEXTCONTENT!MAS NÃO DEIXAVA ADICIONAR EVENTOS AO TEXTO SEM AFETAR O BOTÃO
